@@ -1,0 +1,58 @@
+<?php 
+$data = $this->getalldata();
+// print_r($data[0]['article_id']);
+?>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>First Name</th>
+    <th>Last Name</th>
+ <th>description</th>
+ <th>Delete</th>
+  </tr>
+  <?php foreach($data as $datanew) 
+  
+  {
+    // print_r( $datanew);
+    // exit;
+    ?>
+  <tr>
+    <td><?php echo $datanew['id']; ?></td>
+    <td><?php  echo $datanew['title']; ?></td>
+    <td><?php echo $datanew['content']; ?></td> 
+    <td><?php echo $datanew['description']; ?></td>  
+    <td><a href="<?php echo $block->getDeleteUrl().'?id='.$datanew['id'];?>">Delete</a></td>
+  </tr>
+<?php 
+}
+ ?>
+</table>
+
+</body>
+</html>
+<div class="row">
+    <div class="col-md-8">
+    <form method="post" action="<?= $block->getAddCarPostUrl() ?>">
+   <fieldset>
+    <h3>Fill the form</h3>
+       <div>
+            <label for="title"><?= __("First name") ?>
+           <input type="text" name="title" id="Name" />
+       </div>
+       <br>
+       <div>
+            <label for="content"><?= __("Last name") ?>
+           <input type="text" name="content" id="content" />
+       </div>
+       <br>
+       <div>
+            <label for="description"><?= __("description") ?>
+           <input type="text" name="description" id="description" />
+       </div>
+      <input type="submit" value="<?= __("Submit") ?>" />
+   </fieldset>
+</form>
+    </div>
+</div>
+

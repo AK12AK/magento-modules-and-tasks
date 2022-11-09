@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Akilesh\Modulecrud\Api\ModelRepositoryInterface"
+                type="Akilesh\Modulecrud\Model\ModelRepository" />
+    <preference for="Akilesh\Modulecrud\Api\Data\ModelInterface"
+                type="Akilesh\Modulecrud\Model\Model" />
+
+     <preference for="Akilesh\Modulecrud\Api\Data\SearchCriteriaInterface" 
+                 type="Akilesh\Modulecrud\Model\ModelSearchResults" />
+</config>

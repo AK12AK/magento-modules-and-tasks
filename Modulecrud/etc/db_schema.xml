@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+   <table name="Schemadb" resource="default" engine="innodb" comment="MD Helloworld">
+    <column xsi:type="int" name="id" padding="7" unsigned="false" nullable="false" identity="true" comment="ID" />
+    <constraint xsi:type="primary" referenceId="PRIMARY">
+         <column name="id" />
+      </constraint>
+      <column xsi:type="varchar" name="title" nullable="false" length="20" comment="Name" />
+      <column xsi:type="varchar" name="content" nullable="false" length="20" comment="Email" />
+      <column xsi:type="varchar" name="description" nullable="false" length="255" comment="Descrition" />
+   </table>
+</schema>

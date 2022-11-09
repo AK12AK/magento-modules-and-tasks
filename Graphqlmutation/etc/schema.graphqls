@@ -1,0 +1,14 @@
+type Mutation {
+    contactusFormSubmit(input: ContactusInput!): ContactusOutput @resolver(class: "\\Akilesh\\Graphqlmutation\\Model\\Resolver\\Contactus") @doc(description:"Contact us form")
+}
+
+input ContactusInput {
+    fullname: String @doc(description: "The customer's full name")
+    email: String @doc(description: "The customer's email address")
+    telephone: String @doc(description: "The Telephone")
+    message: String @doc(description: "The customer's message")
+}
+
+type ContactusOutput {
+   success_message: String @doc(description: "Success Message")
+}

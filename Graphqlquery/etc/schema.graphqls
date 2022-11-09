@@ -1,0 +1,10 @@
+type Query {
+    Akilesh: Codilarblog @resolver(class: "Akilesh\\Graphqlquery\\Model\\Resolver\\Blog") @doc(description: "The Codilarblog query returns information about a blog")
+}
+
+type Codilarblog @doc(description: "Codilarblog defines the blog name and other related details") {
+    entity_id: Int
+    first_name: String
+    last_name: String
+    office: String
+}

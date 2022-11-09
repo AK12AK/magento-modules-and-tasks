@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Akilesh_Grptsk::manager" title="Feedback management" module="Akilesh_Grptsk" sortOrder="10" resource="Akilesh_Grptsk::manager"/>
+        <add id="Akilesh_Grptsk::add_row" title="Feedback details" module="Akilesh_Grptsk" sortOrder="20" parent="Akilesh_Grptsk::manager" action="grid/grid" resource="Akilesh_Grptsk::add_row"/>
+    </menu>
+</config>
